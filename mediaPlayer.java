@@ -18,14 +18,14 @@ public static void main(String[] args) throws UnsupportedEncodingException {
     Display display = new Display();
     Shell shell = new Shell(display);
     shell.setLayout(new FillLayout());
-    shell.setText("Play this video app");
+    shell.setText("Play this media app");
     FXCanvas canvas = new FXCanvas(shell, SWT.NONE);
     Group group = new Group();
     Scene scene = new Scene(group);
     canvas.setScene(scene);
     shell.open();
     ArrayList<File> playlist = new ArrayList<File>();
-    playlist.add(new File("/Users/Tremenz/Downloads/The Chainsmokers ft Halsey - Closer (Lyric Video) (Clean) (Single) (HD).mp4"));
+    playlist.add(new File(populatePlaylist));
     List<MediaPlayer> players = new ArrayList<>();
     for(File mediaFile:playlist){
     	Media media = new Media(mediaFile.toURI().toString());
